@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header-background.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -44,7 +44,7 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
+  title: 'David Jiabiao Zhu | CV',
   description: "Example site built with Tim Baker's react resume template",
 };
 
@@ -69,24 +69,22 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm David Jiabiao Zhu.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a student of <strong className="text-stone-100">PoliMi</strong>: II year Computer Science
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me <strong className="text-stone-100">training</strong>,
+        reading some <strong className="text-stone-100">books</strong>, or exploring beautiful{' '}
+        <strong className="text-stone-100">Places</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '', //TODO: Add resume link
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +102,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Motivated to learn and highly adaptable, with skills developed through academic studies and university projects. While my professional experience is currently limited, I am determined to put my skills into practice and grow in professional settings. Actively seeking opportunities to engage with the professional world and collaborate with companies that value a passion for technology and dedication.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Milan, IT', Icon: MapIcon},
+    {label: 'Age', text: '20', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Italian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Photography, Training, Reading', Icon: SparklesIcon},
+    {label: 'Study', text: 'Politecnico di Milano', Icon: AcademicCapIcon},
+    {label: 'Status', text: 'Student', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -125,16 +121,16 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
+        name: 'Italian',
+        level: 9,
+      },
+      {
+        name: 'Chinese',
+        level: 8,
+      },
+      {
         name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        level: 7,
       },
     ],
   },
@@ -143,15 +139,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 1,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 0,
       },
       {
         name: 'GraphQL',
-        level: 6,
+        level: 0,
       },
     ],
   },
@@ -160,15 +156,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
-        level: 8,
+        level: 0,
       },
       {
         name: 'Rust',
-        level: 5,
+        level: 0,
       },
       {
         name: 'Golang',
-        level: 4,
+        level: 0,
       },
     ],
   },
@@ -177,15 +173,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React Native',
-        level: 9,
+        level: 0,
       },
       {
         name: 'Flutter',
-        level: 4,
+        level: 0,
       },
       {
         name: 'Swift',
-        level: 3,
+        level: 0,
       },
     ],
   },
@@ -268,42 +264,30 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '---',
+    location: 'Politecnico di Milano',
+    title: '(In progress) Bachelor’s degree in Informatics Engineering ',
+    content: <p>deepen all the knowledge about informatics and gain experience to develop a solution</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'August 2023',
+    location: 'ITI Galileo Galilei - Ostiglia',
+    title: 'diploma informatico',
+    content: <p>basic knowledge about programming and some programming languages like: C, html, php, css, Java; </p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'May 2022 - May 2022',
+    location: 'XS - Xenia Software & Services',
+    title: 'Stage - junior developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Worked on a project to develop a application for the management of a company's internal data. The project used programming languages like: C#, visualBasic and SQL.
       </p>
     ),
-  },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
+  }
 ];
 
 /**
@@ -313,19 +297,19 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Working Progress',
+      text: 'Working Progress',
+      image: 'https://imgs.search.brave.com/ms8PhEzGN0h_GkHBb8zV0KkQBn4uRwZRIqCRJUXVBm0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU1/Mzg4NDY2L3Bob3Rv/L3dvcmstaW4tcHJv/Z3Jlc3Mtcm9hZC1z/aWduLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0wTkhUdU4x/aHR6VUtPRHo3Z0RN/czRIa29PblBjY2Jf/eWtzRC1MLXZJQ0xR/PQ',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Working Progress',
+      text: 'Working Progress',
+      image: 'https://imgs.search.brave.com/ms8PhEzGN0h_GkHBb8zV0KkQBn4uRwZRIqCRJUXVBm0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU1/Mzg4NDY2L3Bob3Rv/L3dvcmstaW4tcHJv/Z3Jlc3Mtcm9hZC1z/aWduLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0wTkhUdU4x/aHR6VUtPRHo3Z0RN/czRIa29PblBjY2Jf/eWtzRC1MLXZJQ0xR/PQ',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Working Progress',
+      text: 'Working Progress',
+      image: 'https://imgs.search.brave.com/ms8PhEzGN0h_GkHBb8zV0KkQBn4uRwZRIqCRJUXVBm0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU1/Mzg4NDY2L3Bob3Rv/L3dvcmstaW4tcHJv/Z3Jlc3Mtcm9hZC1z/aWduLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0wTkhUdU4x/aHR6VUtPRHo3Z0RN/czRIa29PblBjY2Jf/eWtzRC1MLXZJQ0xR/PQ',
     },
   ],
 };
@@ -335,28 +319,28 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Get in touch 😁',
+  description: 'I encourage reaching out with any questions, collaboration ideas, or just to share your thoughts!',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'zhudavidjiabiao@gmail.com',
+      href: 'mailto:zhudavidjiabiao@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Milan, Italy',
+      href: 'https://maps.app.goo.gl/qegjKtgmL7ucufVj9',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '---',
+      href: '',//TODO: add instagram account
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Tepag',
+      href: 'https://github.com/Tepag',
     },
   ],
 };
@@ -365,9 +349,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Tepag'},
+  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: ''}, //TODO: add stackoverflow account
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/zhudavidjiabiao/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: ''}, //TODO: add instagram account
+  {label: 'Twitter', Icon: TwitterIcon, href: ''}, //TODO: add twitter account
 ];
